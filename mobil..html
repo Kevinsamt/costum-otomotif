@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Include Font Awesome CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .nav {
+            top: 1px;
+            position: fixed;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .nav a {
+            display: inline-block;
+            color: #336699;
+            font-size: 18px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            margin: 0 10px;
+        }
+        .nav a:hover {
+            color: #ff6600;
+        }
+        .nav ul {
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        .nav ul li {
+            display: inline;
+            list-style: none;
+            margin: 0 10px;
+        }
+        .nav .login {
+            text-align: left;
+        }
+        form {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="tel"],
+        select,
+        input[type="date"],
+        button {
+            width: calc(100% - 18px);
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        h1 {
+            text-shadow: #ccc 1px 1px 2px;
+            position: absolute;
+            top: 320px;
+            left: 185px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="#">Costum Otomotif</a>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="motor.html"><i class="fas fa-motorcycle"></i> Motor</a></li>
+            <li><a href="mobil..html"><i class="fas fa-car"></i> Mobil</a></li>
+            <li><a href="aksesoris.html"><i class="fas fa-tools"></i> Aksesoris</a></li>
+            <li><a href="tentang kami.html"><i class="fas fa-info"></i> Tentang Kami</a></li>
+            <li class="login"><a href="login.html"><i class="fas fa-user"></i> Login</a></li>
+        </ul>
+    </div>
+    <div class="logo">
+        <img src="img/2-removebg-preview.png" alt="logo">
+    </div>
+    <h1>Servis Mobil</h1>
+    <form id="myForm">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama">
+        
+        <label for="no_hp">Nomor HP:</label>
+        <input type="tel" id="no_hp" name="no_hp">
+        
+        <label for="jenis_motor">Jenis Motor:</label>
+        <select id="jenis_motor" name="jenis_motor">
+            <option value="Honda">Honda</option>
+            <option value="Yamaha">Yamaha</option>
+            <option value="Suzuki">Suzuki</option>
+        </select>
+        
+        <label for="tanggal_servis">Tanggal Servis:</label>
+        <input type="date" id="tanggal_servis" name="tanggal_servis">
+        
+        <label for="bengkel">Bengkel:</label>
+        <input type="text" id="bengkel" name="bengkel">
+        
+        <button type="button" onclick="sendMessage()">Kirim ke WA</button>
+    </form>
+
+    <script>
+        function sendMessage() {
+            var nama = document.getElementById("nama").value;
+            var noHp = document.getElementById("no_hp").value;
+            var jenisMotor = document.getElementById("jenis_motor").value;
+            var tanggalServis = document.getElementById("tanggal_servis").value;
+            var bengkel = document.getElementById("bengkel").value;
+
+            var phoneNumber = "6281373590144";
+            var message = "Nama: " + nama + "\nNomor HP: " + noHp + "\nJenis Motor: " + jenisMotor + "\nTanggal Servis: " + tanggalServis + "\nBengkel: " + bengkel;
+            var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+
+            window.open(url, "_blank");
+        }
+    </script>
+</body>
+</html>

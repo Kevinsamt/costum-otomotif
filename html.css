@@ -1,0 +1,70 @@
+body {
+    background-image: url('img/COSTUM OTOMOTIF.jpg'); /* Path gambar yang sudah diperbaiki */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.nav {
+    text-align: center;
+}
+
+.nav a {
+    display: inline-block;
+    color: #336699;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin: 0 10px;
+}
+
+.nav a:hover {
+    color: #ff6600;
+}
+
+.nav ul {
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav ul li {
+    display: inline;
+    list-style: none;
+    margin: 0 10px;
+}
+
+.nav .login {
+    text-align: left;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 700;
+    height: 50px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer ul {
+    list-style: none; /* Menghilangkan poin di dalam list */
+    padding: 0; /* Menghilangkan padding default */
+}
+
+.footer ul li {
+    display: inline; /* Atur item agar tersusun secara horizontal */
+    margin: 0 10px; /* Tambahkan sedikit ruang antara setiap item */
+}
+
+.footer ul li a {
+    color: #fff; /* Ubah warna teks tautan pada footer */
+    text-decoration: none; /* Hilangkan garis bawah pada tautan */
+}
